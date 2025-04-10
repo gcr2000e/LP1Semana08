@@ -42,5 +42,10 @@ namespace GameUnit
                 _ => "I" + ToRoman(number - 1),
             };
         }
+
+        public override string ToString()
+        {
+            return base.ToString() + $"{GetType().Name}: HP={Health} COST={Cost:F2}";
+        }
     }
 }
